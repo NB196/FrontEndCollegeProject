@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http' ;
 import { AppComponent } from './app.component';
-import { GenericMethodPageComponent } from './generic-method-page/generic-method-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GenericMethodPageComponent,
-    LoginPageComponent
+    AppointmentListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
