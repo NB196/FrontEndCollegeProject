@@ -1,4 +1,19 @@
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark" > 
+    <ul class = "navbar-nav">
+        <li class = "nav-item">
+            <a  routerLink ="appointments" routerLinkActive="active" class ="nav-link">Appointment List</a> 
+        </li>
+        <li class = "nav-item">
+            <a  routerLink ="create-appointment" routerLinkActive="active" class ="nav-link">Create Appointment</a> 
+        </li>
+    </ul>
+</nav>
 <h1 class = "text-center">{{ title }} </h1>
 <div class = "container"> 
-<app-appointment-list> </app-appointment-list>
+<router-outlet></router-outlet>
 </div>
+<footer class = "footer bg-secondary"> 
+    <div class="container" >
+        <span> All Rights Reserved 2022 @ LastMin.ie </span>
+    </div>
+</footer>
