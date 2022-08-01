@@ -4,17 +4,23 @@ import {HttpClientModule} from '@angular/common/http' ;
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppointmentListComponent
+    AppointmentListComponent,
+    CreateAppointmentComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
