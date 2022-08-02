@@ -8,11 +8,18 @@ import { Appointment } from './appointment';
 })
 export class AppointmentService {
 
-  private baseUrl = "http://localhost:8080/appointments/all" ;
+  private baseUrl = "http://localhost:8080/lastmin/appointment" ;
+  private createUrl ="http://localhost:8080/lastmin/apps";
+
   constructor(private httpClient: HttpClient) { }
 
   getAppointmentsList(): Observable<Appointment[]>{
     return this.httpClient.get<Appointment[]>(`${this.baseUrl}`);
 
+  }
+
+  createAppointment(appointment: Appointment): Observable<Object>{
+    return this.httpClient.post(`${this.createUrl}`, appointment);
+   // return this.httpClient.post(this.baseUrl+ '/apps', FormData)
   }
 }
