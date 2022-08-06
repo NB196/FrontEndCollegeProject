@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
+import { UpdateDateComponent } from './update-date/update-date.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UpdateAppointmentComponent } from './update-appointment/update-appointm
     AppComponent,
     AppointmentListComponent,
     CreateAppointmentComponent,
-    UpdateAppointmentComponent
+    UpdateAppointmentComponent,
+    UpdateDateComponent
   ],
   imports: [
     BrowserModule,
