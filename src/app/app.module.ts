@@ -9,6 +9,8 @@ import { CreateAppointmentComponent } from './create-appointment/create-appointm
 import { FormsModule } from '@angular/forms';
 import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
 import { UpdateDateComponent } from './update-date/update-date.component';
+import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
+import { CancelAppointmentComponent } from './cancel-appointment/cancel-appointment.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { UpdateDateComponent } from './update-date/update-date.component';
     AppointmentListComponent,
     CreateAppointmentComponent,
     UpdateAppointmentComponent,
-    UpdateDateComponent
+    UpdateDateComponent,
+    BookAppointmentComponent,
+    CancelAppointmentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<h2> Appointment List </h2>
+<h2> Appointments</h2>
 
 <table class = "table table-striped" > 
     <thead>
@@ -10,7 +10,7 @@
           <th>Cost</th>  
           <th>Time</th>  
           <th>Booked</th>  
-          <th>Actions</th>
+          <th class = "action">Actions</th>
         </tr>    
     </thead>
     <tbody> 
@@ -23,8 +23,10 @@
             <td> {{appointment.time}}</td>
             <td> {{appointment.bookedInd}}</td> 
             <td>
+                <button (click) = "bookAppointment(appointment.appointmentId)" class = "btn btn-info"> Book</button>
                 <button (click) = "updateAppointment(appointment.appointmentId)" class = "btn btn-info"> Modify Time</button>
                 <button (click) = "updateDate(appointment.appointmentId)" class = "btn btn-info"> Modify Date</button>
+                <button (click) = "cancelAppointment(appointment.appointmentId)" class = "btn btn-info">Cancel</button>
             </td>
         </tr>
 

@@ -4,17 +4,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppointmentService } from '../appointment.service';
 
 @Component({
-  selector: 'app-update-appointment',
-  templateUrl: './update-appointment.component.html',
-  styleUrls: ['./update-appointment.component.css']
+  selector: 'app-book-appointment',
+  templateUrl: './book-appointment.component.html',
+  styleUrls: ['./book-appointment.component.css']
 })
-export class UpdateAppointmentComponent implements OnInit {
+export class BookAppointmentComponent implements OnInit {
+
   id!: number;
   Appointment = new Appointment();
   constructor(private appointmentService: AppointmentService,
     private route: ActivatedRoute,
     private router: Router) { }
-    
+
     ngOnInit(): void {
       this.Appointment = new Appointment();
       this.id =this.route.snapshot.params['id'];
@@ -24,7 +25,7 @@ export class UpdateAppointmentComponent implements OnInit {
       }, error => console.log(error));
     }
      
-      updateTime(){
+      bookAppointment(){
         this.appointmentService.updateTime(this.id, this.Appointment)
         .subscribe(data =>{ 
           console.log(data);
@@ -33,7 +34,7 @@ export class UpdateAppointmentComponent implements OnInit {
       }
 
       onSubmit(){
-        this.appointmentService.updateTime(this.id, this.Appointment).subscribe(data =>{
+        this.appointmentService.bookAppointment(this.id, this.Appointment).subscribe(data =>{
          this.goToAppointmentList();
         }, error => console.log(error));
       }

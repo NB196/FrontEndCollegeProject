@@ -35,7 +35,12 @@ export class UpdateDateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.updateDate();
+    this.appointmentService.updateDate(this.id, this.Appointment).subscribe(data =>{
+     this.goToAppointmentList();
+    }, error => console.log(error));
+  }
+  goToAppointmentList(){
+    this.router.navigate(['/appointments']);
   }
 
 }
