@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Appointment } from '../appointment';
 import { AppointmentService } from '../appointment.service';
 
@@ -11,7 +12,8 @@ export class AppointmentListComponent implements OnInit {
 
   appointments!: Appointment[];
 
-  constructor(private appointmentService: AppointmentService) { }
+  constructor(private appointmentService: AppointmentService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getAppointments();
@@ -21,6 +23,14 @@ export class AppointmentListComponent implements OnInit {
     this.appointmentService.getAppointmentsList().subscribe(data => {
       this.appointments = data;
     })
+  }
+
+  updateAppointment(id : number){
+    this.router.navigate(['update-appointment', id]);
+  }
+
+  updateDate(id : number){
+    this.router.navigate(['update-date', id]);
   }
 
 }
