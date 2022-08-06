@@ -3,24 +3,29 @@
 <table class = "table table-striped" > 
     <thead>
         <tr>
-          <!-- <th>Appointment Id</th>  
-          <th>User Id</th>   -->
+          <th>Appointment Id</th>  
+          <!-- <th>User Id</th>   -->
           <th>Treatment Type</th>  
           <th>Date</th>  
           <th>Cost</th>  
           <th>Time</th>  
           <th>Booked</th>  
+          <th>Actions</th>
         </tr>    
     </thead>
     <tbody> 
         <tr *ngFor = "let appointment of appointments">  
-            <!-- <td> {{appointment.appointmentId}}</td>
-            <td> {{appointment.userId}}</td>  -->
+             <td> {{appointment.appointmentId}}</td>
+            <!--<td> {{appointment.userId}}</td>  -->
             <td> {{appointment.treatmentType}}</td>
             <td> {{appointment.date}}</td>
             <td> {{appointment.cost}}</td>
             <td> {{appointment.time}}</td>
             <td> {{appointment.bookedInd}}</td> 
+            <td>
+                <button (click) = "updateAppointment(appointment.appointmentId)" class = "btn btn-info"> Modify Time</button>
+                <button (click) = "updateDate(appointment.appointmentId)" class = "btn btn-info"> Modify Date</button>
+            </td>
         </tr>
 
     </tbody>

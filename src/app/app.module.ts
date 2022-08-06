@@ -7,13 +7,17 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
 import { AppRoutingModule } from './app-routing.module';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
+import { UpdateDateComponent } from './update-date/update-date.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AppointmentListComponent,
-    CreateAppointmentComponent
+    CreateAppointmentComponent,
+    UpdateAppointmentComponent,
+    UpdateDateComponent
   ],
   imports: [
     BrowserModule,
