@@ -1,0 +1,16 @@
+<div class ="col-md-6 offset-md-3">
+    <h3>Book Appointment</h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+    <p>To book appointment enter 'Y' below</p>
+    
+        <div class ="form-group">
+            <label>Booked Indicator</label>
+            <input type ="text" class = "form-control" id =  "bookedInd"
+               [(ngModel)] = "Appointment.bookedInd" name = "bookedInd">
+        </div>
+    
+        <button class = "btn btn-success bg-secondary" type = "submit">Submit</button>
+    
+    </form>
+    </div>

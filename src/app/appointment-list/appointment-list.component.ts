@@ -33,4 +33,10 @@ export class AppointmentListComponent implements OnInit {
     this.router.navigate(['update-date', id]);
   }
 
+  bookAppointment(id : number){
+    this.router.navigate(['book-appointment', id]);
+  }
+  cancelAppointment(id : number){
+    this.router.navigate(['cancel-appointment', id]);
+  }
 }
